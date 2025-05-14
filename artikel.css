@@ -1,0 +1,139 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Poppins', sans-serif; background: #fff; color: #000; }
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #0A1A52;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background: #0A1A52;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 600;
+}
+
+.active-link {
+  border-bottom: 2px solid white;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #000;
+}
+
+.article-header {
+  background-color: #0A1A52;
+  color: white;
+  padding: 6rem 1rem;
+  text-align: center;
+}
+
+.article-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.article-tools {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.tool {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tool img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 0.5rem;
+}
+
+.tool span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.article-intro {
+  text-align: center;
+  padding: 2rem;
+}
+
+.article-intro img {
+  width: 250px;
+  max-width: 80%;
+  margin-bottom: 1rem;
+}
+
+.article-meta {
+  font-size: 0.85rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.article-intro h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.literasi-tabs {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  border-bottom: 2px solid #ccc;
+}
+
+.literasi-tabs button {
+  flex: 1;
+  padding: 1rem;
+  background: none;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s;
+}
+
+.literasi-tabs button.active {
+  border-color: #0A1A52;
+  color: #0A1A52;
+}
+
+.literasi-content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  line-height: 1.6;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
