@@ -1,84 +1,162 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <title>Detail Artikel</title>
-  <link rel="stylesheet" href="artikel.css">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Detail Artikel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="artikel.css">
+  </head>
 
-<body>
-  <header>
-    <div><img src="logo.png" alt="Logo" style="height: 40px;"></div>
-    <nav>
-      <a href="homepage.html">BERANDA</a>
-      <a href="artikel_utama.html" class="active-link">ARTIKEL</a>
-      <a href="#">TENTANG KAMI</a>
+  <body class="bg-[#E9EBEC] min-h-screen flex flex-col relative">
+    <!-- Navbar - matching the index.html style -->
+    <nav class="bg-[#0B1E4F] flex items-center justify-between px-4 md:px-8 py-4 border-b border-[#1A2E6E] relative z-30">
+      <div class="flex items-center space-x-4">
+        <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center">
+          <img
+            alt="Icon of an open book"
+            class="w-6 h-6"
+            src="https://storage.googleapis.com/a1aa/image/cf704e49-7948-4f9c-cf4d-49a99f94ce81.jpg"
+          />
+        </div>
+      </div>
+      <div class="flex-1 flex justify-center space-x-8 text-white text-xs font-semibold tracking-widest">
+        <a href="#" class="hover:underline nav-link">BERANDA</a>
+        <a href="#" class="hover:underline nav-link active-link">ARTIKEL</a>
+        <a href="#" class="hover:underline nav-link">TENTANG KAMI</a>
+      </div>
+      <div class="flex items-center space-x-6 ml-auto">
+        <img
+          alt="User profile"
+          class="w-8 h-8 rounded-full object-cover hidden sm:block"
+          src="https://storage.googleapis.com/a1aa/image/a0344b43-aba6-4fc2-e4a7-c8f861a01589.jpg"
+        />
+        <button aria-label="Menu" id="menuButton" class="text-white text-2xl focus:outline-none">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
     </nav>
-    <div><img src="profile.jpg" alt="Profile" style="height: 40px; border-radius: 50%;"></div>
-  </header>    
-  <div class="article-header">
-    <h2 class="article-title">
+
+    <!-- Article Header -->
+    <div class="article-header">
+      <h2 class="article-title">
         PENGARUH PENDIDIKAN KESEHATAN<br>
         TERHADAP PERILAKU HIDUP BERSIH DAN SEHAT<br>
         PADA REMAJA
-    </h2>
-    <div class="article-tools">
+      </h2>
+      <div class="article-tools">
         <div class="tool">
-        <img src="save-icon.png" alt="Simpan">
-        <span>SIMPAN</span>
+          <img src="save-icon.png" alt="Simpan">
+          <span>SIMPAN</span>
         </div>
         <div class="tool">
-        <img src="collection-icon.png" alt="Koleksi">
-        <span>KOLEKSI</span>
+          <img src="collection-icon.png" alt="Koleksi">
+          <span>KOLEKSI</span>
         </div>
         <div class="tool">
-        <img src="share-icon.png" alt="Bagikan">
-        <span>BAGIKAN</span>
+          <img src="share-icon.png" alt="Bagikan">
+          <span>BAGIKAN</span>
         </div>
+      </div>
     </div>
-  </div>
-</div>
 
-  <!-- Intro: Gambar & Judul -->
-  <div class="article-intro">
-    <img src="anak-sampah.png" alt="Ilustrasi anak buang sampah">
-    <p class="article-meta">Kontan -- Ringgana Wandy Wiguna</p>
-    <h3>Pilih Tingkatan Literasi Yang Kamu Minati</h3>
-  </div>
+    <!-- Main content -->
+    <main class="flex-grow relative z-10">
+      <!-- Intro: Gambar & Judul -->
+      <div class="article-intro">
+        <img src="anak-sampah.png" alt="Ilustrasi anak buang sampah">
+        <p class="article-meta">Kontan -- Ringgana Wandy Wiguna</p>
+        <h3>Pilih Tingkatan Literasi Yang Kamu Minati</h3>
+      </div>
 
-  <!-- Tab Pilihan -->
-  <div class="literasi-tabs">
-    <button class="tab-btn active" data-target="lanjutan">Lanjutan</button>
-    <button class="tab-btn" data-target="menengah">Menengah</button>
-    <button class="tab-btn" data-target="pemula">Pemula</button>
-  </div>
+      <!-- Tab Pilihan -->
+      <div class="literasi-tabs">
+        <button class="tab-btn active" data-target="lanjutan">Lanjutan</button>
+        <button class="tab-btn" data-target="menengah">Menengah</button>
+        <button class="tab-btn" data-target="pemula">Pemula</button>
+      </div>
 
-  <!-- Isi Berdasarkan Tab -->
-  <div class="literasi-content">
-    <div id="lanjutan" class="tab-content active">
-      <p><strong>ABSTRAK:</strong> Penelitian ini bertujuan untuk mengevaluasi pengaruh pendidikan kesehatan terhadap perilaku hidup bersih dan sehat (PHBS) pada remaja... [isi lanjutan]</p>
-    </div>
-    <div id="menengah" class="tab-content">
-      <p><strong>MENENGAH:</strong> Dalam tahapan menengah, remaja mulai menunjukkan pemahaman lebih baik terhadap PHBS... [isi menengah]</p>
-    </div>
-    <div id="pemula" class="tab-content">
-      <p><strong>PEMULA:</strong> Pengenalan awal pentingnya kebersihan pribadi dan lingkungan mulai dikenalkan melalui kegiatan sederhana... [isi pemula]</p>
-    </div>
-  </div>
+      <!-- Isi Berdasarkan Tab -->
+      <div class="literasi-content">
+        <div id="lanjutan" class="tab-content active">
+          <p><strong>ABSTRAK:</strong> Penelitian ini bertujuan untuk mengevaluasi pengaruh pendidikan kesehatan terhadap perilaku hidup bersih dan sehat (PHBS) pada remaja... [isi lanjutan]</p>
+        </div>
+        <div id="menengah" class="tab-content">
+          <p><strong>MENENGAH:</strong> Dalam tahapan menengah, remaja mulai menunjukkan pemahaman lebih baik terhadap PHBS... [isi menengah]</p>
+        </div>
+        <div id="pemula" class="tab-content">
+          <p><strong>PEMULA:</strong> Pengenalan awal pentingnya kebersihan pribadi dan lingkungan mulai dikenalkan melalui kegiatan sederhana... [isi pemula]</p>
+        </div>
+      </div>
+    </main>
 
-  <script>
-    const tabs = document.querySelectorAll('.tab-btn');
-    const contents = document.querySelectorAll('.tab-content');
+    <!-- Sidebar matching the index.html style -->
+    <aside id="sidebar" class="fixed top-0 right-0 h-full w-72 bg-white shadow-lg transform translate-x-full z-40 flex flex-col" aria-hidden="true">
+      <div class="px-6 py-5 border-b border-gray-300 flex items-center space-x-4">
+        <img src="https://storage.googleapis.com/a1aa/image/a0344b43-aba6-4fc2-e4a7-c8f861a01589.jpg" class="w-12 h-12 rounded-full object-cover" alt="User avatar" />
+        <div>
+          <p class="font-bold text-gray-900">Rafi Natanginrat</p>
+          <p class="text-xs text-gray-500">rafi@example.com</p>
+        </div>
+      </div>
+      <nav class="flex flex-col mt-4 space-y-1 px-4">
+        <button class="menu-item" data-menu="simpanan">Simpanan</button>
+        <button class="menu-item" id="menuTeman" data-menu="teman">Teman</button>
+        <button class="menu-item" data-menu="koleksi">Koleksi</button>
+        <button class="menu-item" data-menu="performaku">Performaku</button>
+        <button class="menu-item" data-menu="keluar">Keluar</button>
+      </nav>
+    </aside>
 
-    tabs.forEach(btn => {
-      btn.addEventListener('click', () => {
-        tabs.forEach(b => b.classList.remove('active'));
-        contents.forEach(c => c.classList.remove('active'));
+    <!-- Overlay -->
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-30 opacity-0 pointer-events-none z-30 transition-opacity"></div>
 
-        btn.classList.add('active');
-        document.getElementById(btn.dataset.target).classList.add('active');
+    <script>
+      // Tab functionality
+      const tabs = document.querySelectorAll('.tab-btn');
+      const contents = document.querySelectorAll('.tab-content');
+
+      tabs.forEach(btn => {
+        btn.addEventListener('click', () => {
+          tabs.forEach(b => b.classList.remove('active'));
+          contents.forEach(c => c.classList.remove('active'));
+
+          btn.classList.add('active');
+          document.getElementById(btn.dataset.target).classList.add('active');
+        });
       });
-    });
-  </script>
-</body>
+
+      // Sidebar functionality (matching index.html)
+      const menuButton = document.getElementById('menuButton');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('overlay');
+
+      function toggleSidebar() {
+        const isOpen = sidebar.classList.contains('translate-x-0');
+        
+        if (isOpen) {
+          sidebar.classList.remove('translate-x-0');
+          sidebar.classList.add('translate-x-full');
+          overlay.classList.add('opacity-0', 'pointer-events-none');
+          overlay.classList.remove('opacity-100', 'pointer-events-auto');
+        } else {
+          sidebar.classList.remove('translate-x-full');
+          sidebar.classList.add('translate-x-0');
+          overlay.classList.remove('opacity-0', 'pointer-events-none');
+          overlay.classList.add('opacity-100', 'pointer-events-auto');
+        }
+      }
+
+      menuButton.addEventListener('click', toggleSidebar);
+      overlay.addEventListener('click', toggleSidebar);
+    </script>
+  </body>
 </html>
