@@ -1,116 +1,236 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Artikel | Lexica</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header>
-    <div><img src="logo.png" alt="Logo" style="height: 40px;"></div>
-    <nav>
-      <a href="homepage.html">BERANDA</a>
-      <a href="#" class="active-link">ARTIKEL</a>
-      <a href="#">TENTANG KAMI</a>
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Artikel | Lexica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="updated-artikel.css">
+  </head>
+
+  <body class="bg-[#E9EBEC] min-h-screen flex flex-col relative">
+    <!-- Navbar - matching the updated style -->
+    <nav class="bg-[#0B1E4F] flex items-center justify-between px-4 md:px-8 py-4 border-b border-[#1A2E6E] relative z-30">
+      <div class="flex items-center space-x-4">
+        <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center">
+          <img
+            alt="Icon of an open book"
+            class="w-6 h-6"
+            src="https://storage.googleapis.com/a1aa/image/cf704e49-7948-4f9c-cf4d-49a99f94ce81.jpg"
+          />
+        </div>
+      </div>
+      <div class="flex-1 flex justify-center space-x-8 text-white text-xs font-semibold tracking-widest">
+        <a href="#" class="hover:underline nav-link">BERANDA</a>
+        <a href="#" class="hover:underline nav-link active-link">ARTIKEL</a>
+        <a href="#" class="hover:underline nav-link">TENTANG KAMI</a>
+      </div>
+      <div class="flex items-center space-x-6 ml-auto">
+        <img
+          alt="User profile"
+          class="w-8 h-8 rounded-full object-cover hidden sm:block"
+          src="https://storage.googleapis.com/a1aa/image/a0344b43-aba6-4fc2-e4a7-c8f861a01589.jpg"
+        />
+        <button aria-label="Menu" id="menuButton" class="text-white text-2xl focus:outline-none">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
     </nav>
-    <div><img src="profile.jpg" alt="Profile" style="height: 40px; border-radius: 50%;"></div>
-  </header>
 
-  <section class="blue-background">
-    <div class="search-section">
-      <h2>CARI BACAAN FAVORITMU GRATIS!</h2>
-      <input type="text" placeholder="Cari artikel...">
-      <div class="categories">
-        <button>Hiburan</button>
-        <button>Olahraga</button>
-        <button>Pendidikan</button>
-        <button>Bisnis</button>
-        <button>Teknologi</button>
-        <button>Politik</button>
-      </div>
-    </div>
-
-    <div class="highlight">
-      <img src="bersih.jpg" alt="Bersih-bersih">
-      <div>
-        <span>Terbaru · General</span>
-        <h3>11 MEI 2024 , JAKARTA<br>KONTEN VIRAL BERSIHKAN</h3>
-        <p>Warga ibu kota rame-rame turun ke jalan, bukan buat demo, tapi buat aksi bersih-bersih yang lagi nge-tren banget di sosial media.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="articles-section">
-    <a href="lanjutan.html" style="text-decoration: none; color: inherit;">
-      <div class="card">
-        <div class="card-top">
-          <img src="daur-ulang.jpg" alt="Daur ulang">
-          <div class="card-info">
-            <span>General</span>
-            <h4>PENTINGNYA DAUR ULANG SAMPAH UNTUK KESEHATAN LINGKUNGAN</h4>
+    <!-- Main Content -->
+    <main class="flex-grow relative z-10">
+      <!-- Search Section -->
+      <section class="bg-[#0B1E4F] text-white py-8 px-4 md:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-xl md:text-2xl font-bold mb-4">CARI BACAAN FAVORITMU GRATIS!</h2>
+          <div class="relative mb-6">
+            <input type="text" placeholder="Cari artikel..." 
+                  class="w-full md:w-4/5 mx-auto py-3 px-6 rounded-full border-none" />
+          </div>
+          <div class="flex flex-wrap justify-center gap-2">
+            <button class="bg-gray-200 text-gray-800 font-semibold px-4 py-2 rounded-full text-sm hover:bg-gray-300">Hiburan</button>
+            <button class="bg-gray-200 text-gray-800 font-semibold px-4 py-2 rounded-full text-sm hover:bg-gray-300">Olahraga</button>
+            <button class="bg-gray-200 text-gray-800 font-semibold px-4 py-2 rounded-full text-sm hover:bg-gray-300">Pendidikan</button>
+            <button class="bg-gray-200 text-gray-800 font-semibold px-4 py-2 rounded-full text-sm hover:bg-gray-300">Bisnis</button>
+            <button class="bg-gray-200 text-gray-800 font-semibold px-4 py-2 rounded-full text-sm hover:bg-gray-300">Teknologi</button>
+            <button class="bg-gray-200 text-gray-800 font-semibold px-4 py-2 rounded-full text-sm hover:bg-gray-300">Politik</button>
           </div>
         </div>
-        <p>Sampah adalah masalah lingkungan yang tidak mudah diselesaikan sejak beberapa dekade lalu. Kementerian 
-          Lingkungan Hidup dan Kehutanan (KLHK) mengemukakan bahwa Indonesia menghasilkan sebanyak 21,88 juta ton 
-          sampah di tahun 2021. Masalah tentang sampah semakin kompleks di masa pandemi karena banyaknya limbah masker.</p>
-      </div>
-    </a>
-    <div class="card">
-      <div class="card-top">
-        <img src="daur-ulang.jpg" alt="Daur ulang">
-        <div class="card-info">
-          <span>General</span>
-          <h4>MENINGKATKAN KESEHATAN MENTAL DENGAN MEDITASI</h4>
+      
+        <!-- Highlight Article -->
+        <div class="max-w-4xl mx-auto bg-white text-gray-800 rounded-lg p-4 md:p-6 mt-8 flex flex-col md:flex-row gap-4 shadow-md">
+          <img src="bersih.jpg" alt="Bersih-bersih" class="w-full md:w-64 h-48 object-cover rounded-lg" />
+          <div class="flex flex-col">
+            <span class="text-sm text-gray-500 mb-2">Terbaru · General</span>
+            <h3 class="text-lg font-bold mb-2">11 MEI 2024, JAKARTA<br>KONTEN VIRAL BERSIHKAN</h3>
+            <p class="text-gray-600">Warga ibu kota rame-rame turun ke jalan, bukan buat demo, tapi buat aksi bersih-bersih yang lagi nge-tren banget di sosial media.</p>
+          </div>
         </div>
-      </div>
-      <p>Setiap orang memiliki masalah hidup yang kadang membuatnya merasa stres. Jika kondisi ini tidak diatasi, 
-        maka akan timbul gejala depresi yang membahayakan kesehatan mental.</p>
-    </div>
-    <div class="card">
-      <div class="card-top">
-        <img src="daur-ulang.jpg" alt="Daur ulang">
-        <div class="card-info">
-          <span>General</span>
-          <h4>BISAKAH SAMPAH DI LAUT BERDAMPAK PADA KESEHATAN MANUSIA?</h4>
-        </div>
-      </div>
-      <p>Plastik telah menyebar hingga lingkungan laut di seluruh penjuru dunia. Sejumlah besar sampah plastik di 
-        laut berasal dari sumber kontinental melalui sungai seperti limbah industri serta limpasan sedimen pantai. 
-        Selain itu, kegiatan industri lepas pantai juga dapat menjadi sumber sampah plastik di laut.</p>
-    </div>
-    <div class="card">
-      <div class="card-top">
-        <img src="daur-ulang.jpg" alt="Daur ulang">
-        <div class="card-info">
-          <span>General</span>
-          <h4>MEMPERKUAT INDUSTRI BAJA SEBAGAI URAT NADI PERTAHANAN</h4>
-        </div>
-      </div>
-      <p>Baja merupakan bahan dasar yang sangat penting dalam pembuatan berbagai peralatan militer seperti rudal, pesawat jet, 
-        kapal selam, hingga amunisi. Dengan kondisi geografis Indonesia yang merupakan negara kepulauan, tentu saja harus didukung 
-        alat utama sistem senjata yang mumpuni. Untuk keperluan itu, tentunya membutuhkan dukungan industri baja yang memadai.</p>
-    </div>
-  </section>
+      </section>
 
-  <section class="latest-section">
-    <h2>ARTIKEL TERBARU</h2>
-    <div class="latest-articles">
-      <div class="section">
-        <img src="perempuan.jpg" alt="Perempuan">
-        <h4>WAJAH PEREMPUAN DALAM HARI PEREMPUAN INTERNASIONAL</h4>
+      <!-- Article Cards -->
+      <section class="py-8 px-4 md:px-8">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Card 1 - with link -->
+          <a href="lanjutan.html" class="block no-underline text-inherit hover:no-underline hover:shadow-lg transition-shadow">
+            <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+              <div class="p-4 flex gap-4">
+                <img src="daur-ulang.jpg" alt="Daur ulang" class="w-24 h-24 object-cover rounded-lg" />
+                <div>
+                  <span class="inline-block bg-gray-100 text-gray-800 text-xs font-semibold px-2 py-1 rounded-full">General</span>
+                  <h4 class="font-bold text-gray-900 mt-2">PENTINGNYA DAUR ULANG SAMPAH UNTUK KESEHATAN LINGKUNGAN</h4>
+                </div>
+              </div>
+              <div class="p-4 pt-0">
+                <p class="text-sm text-gray-600">Sampah adalah masalah lingkungan yang tidak mudah diselesaikan sejak beberapa dekade lalu. Kementerian 
+                  Lingkungan Hidup dan Kehutanan (KLHK) mengemukakan bahwa Indonesia menghasilkan sebanyak 21,88 juta ton 
+                  sampah di tahun 2021. Masalah tentang sampah semakin kompleks di masa pandemi karena banyaknya limbah masker.</p>
+              </div>
+            </div>
+          </a>
+          
+          <!-- Card 2 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-md">
+            <div class="p-4 flex gap-4">
+              <img src="daur-ulang.jpg" alt="Meditasi" class="w-24 h-24 object-cover rounded-lg" />
+              <div>
+                <span class="inline-block bg-gray-100 text-gray-800 text-xs font-semibold px-2 py-1 rounded-full">General</span>
+                <h4 class="font-bold text-gray-900 mt-2">MENINGKATKAN KESEHATAN MENTAL DENGAN MEDITASI</h4>
+              </div>
+            </div>
+            <div class="p-4 pt-0">
+              <p class="text-sm text-gray-600">Setiap orang memiliki masalah hidup yang kadang membuatnya merasa stres. Jika kondisi ini tidak diatasi, 
+                maka akan timbul gejala depresi yang membahayakan kesehatan mental.</p>
+            </div>
+          </div>
+          
+          <!-- Card 3 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-md">
+            <div class="p-4 flex gap-4">
+              <img src="daur-ulang.jpg" alt="Sampah Laut" class="w-24 h-24 object-cover rounded-lg" />
+              <div>
+                <span class="inline-block bg-gray-100 text-gray-800 text-xs font-semibold px-2 py-1 rounded-full">General</span>
+                <h4 class="font-bold text-gray-900 mt-2">BISAKAH SAMPAH DI LAUT BERDAMPAK PADA KESEHATAN MANUSIA?</h4>
+              </div>
+            </div>
+            <div class="p-4 pt-0">
+              <p class="text-sm text-gray-600">Plastik telah menyebar hingga lingkungan laut di seluruh penjuru dunia. Sejumlah besar sampah plastik di 
+                laut berasal dari sumber kontinental melalui sungai seperti limbah industri serta limpasan sedimen pantai. 
+                Selain itu, kegiatan industri lepas pantai juga dapat menjadi sumber sampah plastik di laut.</p>
+            </div>
+          </div>
+          
+          <!-- Card 4 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-md">
+            <div class="p-4 flex gap-4">
+              <img src="daur-ulang.jpg" alt="Industri Baja" class="w-24 h-24 object-cover rounded-lg" />
+              <div>
+                <span class="inline-block bg-gray-100 text-gray-800 text-xs font-semibold px-2 py-1 rounded-full">General</span>
+                <h4 class="font-bold text-gray-900 mt-2">MEMPERKUAT INDUSTRI BAJA SEBAGAI URAT NADI PERTAHANAN</h4>
+              </div>
+            </div>
+            <div class="p-4 pt-0">
+              <p class="text-sm text-gray-600">Baja merupakan bahan dasar yang sangat penting dalam pembuatan berbagai peralatan militer seperti rudal, pesawat jet, 
+                kapal selam, hingga amunisi. Dengan kondisi geografis Indonesia yang merupakan negara kepulauan, tentu saja harus didukung 
+                alat utama sistem senjata yang mumpuni. Untuk keperluan itu, tentunya membutuhkan dukungan industri baja yang memadai.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Latest Articles Section -->
+      <section class="bg-[#0B1E4F] text-white py-8 px-4 md:px-8">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-xl font-bold text-center mb-6">ARTIKEL TERBARU</h2>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <!-- Latest 1 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md">
+              <img src="perempuan.jpg" alt="Perempuan" class="w-full h-48 object-cover" />
+              <div class="p-4">
+                <h4 class="font-bold text-gray-900">WAJAH PEREMPUAN DALAM HARI PEREMPUAN INTERNASIONAL</h4>
+              </div>
+            </div>
+            
+            <!-- Latest 2 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md">
+              <img src="energi.jpg" alt="Teknologi Hijau" class="w-full h-48 object-cover" />
+              <div class="p-4">
+                <h4 class="font-bold text-gray-900">INOVASI TEKNOLOGI RAMAH LINGKUNGAN UNTUK DUNIA LEBIH SEHAT</h4>
+              </div>
+            </div>
+            
+            <!-- Latest 3 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md">
+              <img src="angkot.jpg" alt="Angkot Bandung" class="w-full h-48 object-cover" />
+              <div class="p-4">
+                <h4 class="font-bold text-gray-900">REVOLUSI ANGKUTAN UMUM BANDUNG DI UJUNG JARI?</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="text-center mt-8">
+            <button class="bg-[#5C6BC0] hover:bg-[#4a56a0] text-white font-bold py-2 px-8 rounded-full transition-colors">
+              PORTFOLIO
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Sidebar matching the updated style -->
+    <aside id="sidebar" class="fixed top-0 right-0 h-full w-72 bg-white shadow-lg transform translate-x-full z-40 flex flex-col" aria-hidden="true">
+      <div class="px-6 py-5 border-b border-gray-300 flex items-center space-x-4">
+        <img src="https://storage.googleapis.com/a1aa/image/a0344b43-aba6-4fc2-e4a7-c8f861a01589.jpg" class="w-12 h-12 rounded-full object-cover" alt="User avatar" />
+        <div>
+          <p class="font-bold text-gray-900">Rafi Natanginrat</p>
+          <p class="text-xs text-gray-500">rafi@example.com</p>
+        </div>
       </div>
-      <div class="section">
-        <img src="energi.jpg" alt="Teknologi Hijau">
-        <h4>INOVASI TEKNOLOGI RAMAH LINGKUNGAN UNTUK DUNIA LEBIH SEHAT</h4>
-      </div>
-      <div class="section">
-        <img src="angkot.jpg" alt="Angkot Bandung">
-        <h4>REVOLUSI ANGKUTAN UMUM BANDUNG DI UJUNG JARI?</h4>
-      </div>
-    </div>
-    <button class="portfolio-button">PORTFOLIO</button>
-  </section>
-</body>
+      <nav class="flex flex-col mt-4 space-y-1 px-4">
+        <button class="menu-item" data-menu="simpanan">Simpanan</button>
+        <button class="menu-item" id="menuTeman" data-menu="teman">Teman</button>
+        <button class="menu-item" data-menu="koleksi">Koleksi</button>
+        <button class="menu-item" data-menu="performaku">Performaku</button>
+        <button class="menu-item" data-menu="keluar">Keluar</button>
+      </nav>
+    </aside>
+
+    <!-- Overlay -->
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-30 opacity-0 pointer-events-none z-30 transition-opacity"></div>
+
+    <script>
+      // Sidebar functionality (matching updated style)
+      const menuButton = document.getElementById('menuButton');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('overlay');
+
+      function toggleSidebar() {
+        const isOpen = sidebar.classList.contains('translate-x-0');
+        
+        if (isOpen) {
+          sidebar.classList.remove('translate-x-0');
+          sidebar.classList.add('translate-x-full');
+          overlay.classList.add('opacity-0', 'pointer-events-none');
+          overlay.classList.remove('opacity-100', 'pointer-events-auto');
+        } else {
+          sidebar.classList.remove('translate-x-full');
+          sidebar.classList.add('translate-x-0');
+          overlay.classList.remove('opacity-0', 'pointer-events-none');
+          overlay.classList.add('opacity-100', 'pointer-events-auto');
+        }
+      }
+
+      menuButton.addEventListener('click', toggleSidebar);
+      overlay.addEventListener('click', toggleSidebar);
+    </script>
+  </body>
 </html>
